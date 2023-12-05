@@ -8,7 +8,7 @@ This directory service aims to provide a simplified and efficient systems admini
 
 While this directory service provide a simplified manner of systems administration, it also provides threat actors with easy access to resource when misused.
 
-This attack aims to outline the threats posed to the organisation from a data exfiltration threat  making use of both the PowerSploit module and PowerShell. 
+This attack aims to outline the threats posed to the organisation from a data exfiltration threat making use of both the PowerSploit module and PowerShell. 
 
 ## Machines Used
 
@@ -251,7 +251,7 @@ Get-TimedScreenshot -Path $path -Interval 3 -EndTime 18:00
 |Name|Backup PowerShell Modules|
 |Description|A script to backup PowerShell Modules downloaded into the system|
 |Use the user account|Default User Selected|
-|When to Run|Run Whether user is logged on or not|
+|When to Run|Run only when user is logged on|
 |Run with highest privileges|Checked|
 |Configure for|Windows Server 2022|
 |Hidden|Checked|
@@ -548,6 +548,9 @@ As such by conducting regularly scheduled scans, any malicious files inserted wi
 ## References
 
 [PowerSploit](https://github.com/PowerShellMafia/PowerSploit)  
+[Display computers in OU or AD group with PowerShell](https://4sysops.com/archives/get-adcomputer-display-computers-in-ou-or-ad-group-with-powershell/)  
+[Exploiting Microsoft’s Active Directory](https://medium.com/offensive-security-walk-throughs/exploiting-microsofts-active-directory-47aa5eb4b47d)  
+[Running PowerShell Script without displaying Window](https://stackoverflow.com/questions/1802127/how-to-run-a-powershell-script-without-displaying-a-window)  
 [Removing Protection History report from Windows Defender](https://answers.microsoft.com/en-us/windows/forum/all/how-to-remove-a-protection-history-report-from/c73c5969-68fe-454e-833f-b602af0b175d)  
 [Tracking and Analyzing Remote Desktop Connection Logs in Windows](https://woshub.com/rdp-connection-logs-forensics-windows/)  
 [Microsoft Defender Antivirus exclusions on Windows Server](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/configure-server-exclusions-microsoft-defender-antivirus?view=o365-worldwide)  
