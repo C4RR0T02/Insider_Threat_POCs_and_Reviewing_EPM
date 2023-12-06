@@ -14,3 +14,5 @@
 
 ## References
 
+[Sinister](https://github.com/PushpenderIndia/Sinister/tree/master)  
+

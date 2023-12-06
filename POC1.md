@@ -10,23 +10,6 @@ While this directory service provide a simplified manner of systems administrati
 
 This attack aims to outline the threats posed to the organisation from a data exfiltration threat making use of both the PowerSploit module and PowerShell. 
 
-## Machines Used
-
-|Machine Name|Machine IP|Type of Machine|Domain|
-|--|--|--|--|
-|Windows Server 2022|192.168.8.10|Domain Controller|c4rr0ting.com|
-|Windows 10 Client|192.168.8.11|Client|c4rr0ting.com|
-
-## Users
-
-|User Name|Domain|Group|
-|--|--|--|
-|CARR0T|c4rr0ting.com|Administrator|
-|Test|c4rr0ting.com|Users|
-|S1|c4rr0ting.com|Sales|
-|S2|c4rr0ting.com|Sales|
-|S3|c4rr0ting.com|Sales|
-
 ## Steps to Carry Out Exploitation
 
 There are a total of 3 steps to be caried out during the process of data exfiltration of the Microsoft Active Directory by either an insider or by an administrator with malicious intent. 
