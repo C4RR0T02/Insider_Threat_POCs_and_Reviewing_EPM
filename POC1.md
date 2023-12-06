@@ -398,7 +398,7 @@ While tasks are being constantly scheduled within systems to perform an update o
 
 To combat this, one method is to notify the administrators of any new scheduled tasks to allow administrators to further look into and investigate any newly scheduled task which may pose a potential threat towards the organisations active directory. 
 
-### Steps to Notify Administrators of New Scheduled Tasks
+#### Steps to Notify Administrators of New Scheduled Tasks
 
 1. Create a PowerShell script like the following modifying the information accordingly
 
