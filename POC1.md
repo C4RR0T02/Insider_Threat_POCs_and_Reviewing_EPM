@@ -12,7 +12,7 @@ This attack aims to outline the threats posed to the organisation from a data ex
 
 ## Steps to Carry Out Exploitation
 
-There are a total of 3 steps to be caried out during the process of data exfiltration of the Microsoft Active Directory by either an insider or by an administrator with malicious intent. 
+There are a total of 3 steps to be caried out during the process of data exfiltration of the Microsoft Active Directory by either an insider or by a third party threat actor.
 
 The following are the 3 steps taken during the POC.
 
@@ -54,7 +54,11 @@ C:\Windows\System32\WindowsPowerShell
 
 ![Windows Security Configuration](/images/POC_1/Exploitation/POC1_Excluding_WindowsPowerShell_Folder.png)
 
-2. Navigate to the following directory and upload the various folders within the PowerSploit folder
+2. Switch off Real-time protection
+
+ ![Real-Time Protection Disabled](/images/POC_1/Exploitation/POC1_Real_Time_Protection_Disabled.png)
+
+3. Navigate to the following directory and upload the various folders within the PowerSploit folder
    
 ```
 C:\Windows\System32\WindowsPowerShell\v1.0\Modules
@@ -62,7 +66,7 @@ C:\Windows\System32\WindowsPowerShell\v1.0\Modules
 
 ![Uploaded folder within the directory](/images/POC_1/Exploitation/POC1_PowerSploit_in_Victim_Machine.png)
 
-3. Execute the following PowerShell script below to extract the user data of all connections made 
+4. Execute the following PowerShell script below to extract the user data of all connections made 
 
 ```ps1
 # Extracting user data from any connections users made towards the Windows Server through RDP
@@ -88,7 +92,7 @@ Write-Host "RDP Client Data:"
 $rdpClientData
 ```
 
-4. Execute the following PowerShell script below to extract all users, computers and active directory information
+5. Execute the following PowerShell script below to extract all users, computers and active directory information
 
 ```ps1
 Import-Module ActiveDirectory
@@ -192,7 +196,7 @@ foreach ($ou in $ous) {
 }
 ```
 
-5. Create a script with the following content and save it in a file locations where it will seem normal
+6. Create a script with the following content and save it in a file locations where it will seem normal
 
 
 File Location:
@@ -226,7 +230,7 @@ if (-not (Test-Path -Path $path -PathType Container)) {
 Get-TimedScreenshot -Path $path -Interval 3 -EndTime 18:00 
 ```
 
-1. Open Task Scheduler and create a task with the following descriptions
+7. Open Task Scheduler and create a task with the following descriptions
 
 **General Tab**
 |Options|Value|
@@ -280,9 +284,9 @@ Get-TimedScreenshot -Path $path -Interval 3 -EndTime 18:00
 
 ![Task Scheduler Settings Options](/images/POC_1/Exploitation/POC1_Task_Scheduler_Settings.png)
 
-2. Run the task
+8. Run the task
 
-3. Notice that the task is running and there are no PowerShell Windows open
+9. Notice that the task is running and there are no PowerShell Windows open
 
 ![Script Executing in Background](/images/POC_1/Exploitation/POC1_PowerShell_Hidden_Task_Running.png)
 
@@ -347,7 +351,7 @@ To combat threat actors from being able to evade a real time scan, the path excl
 
 ![Control whether or not exclusions are visible to Local Admins rule](/images/POC_1/Mitigation/Disable_Path_Exclusions/POC1_Control_Exclusions_Visibility.png)
 
-1. Within Microsoft Defender Antivirus, Locate `Exclusions`
+7. Within Microsoft Defender Antivirus, Locate `Exclusions`
 
 ![Microsoft Defender Antivirus Exclusions Configurations within Group Policy](/images/POC_1/Mitigation/Disable_Path_Exclusions/POC1_Microsoft_Defender_Exclusions_Configuration_Group_Policy.png)
 
@@ -371,7 +375,7 @@ Invoke-GPUpdate -Force
 
 ![Forcing Group Policy Update Through PowerShell](/images/POC_1/Mitigation/Disable_Path_Exclusions/POC1_gpupdate_force_PowerShell_command.png)
 
-1.  Verify that the policy has been enforced by navigating to Windows Defender and ensuring that you are unable to view and or modify the list for file exclusions
+10.  Verify that the policy has been enforced by navigating to Windows Defender and ensuring that you are unable to view and or modify the list for file exclusions
 
 ![Permision Denied for Windows Security Exclusions Page](/images/POC_1/Mitigation/Disable_Path_Exclusions/POC1_Windows_Security_Exclusions_Permission_Denied.png)
 
@@ -430,7 +434,7 @@ if ($Event) {
 
 ![Event Viewer Task Scheduler Operational Tab](/images/POC_1/Mitigation/Notify_New_Tasks/POC1_Event_Viewer_Task_Scheduler_Operational_Tab.png)
 
-1. Filter the current log to show all logs with an `Event ID` of `106`
+4. Filter the current log to show all logs with an `Event ID` of `106`
 
 ![Filtering Event Log with Event ID 106](/images/POC_1/Mitigation/Notify_New_Tasks/POC1_Event_Viewer_Filter_By_Event_ID.png)
 

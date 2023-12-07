@@ -222,7 +222,7 @@ if ($Event) {
 
 ![Event Viewer Task Scheduler Operational Tab](/images/POC_1/Mitigation/Notify_New_Tasks/POC1_Event_Viewer_Task_Scheduler_Operational_Tab.png)
 
-1. Filter the current log to show all logs with an `Event ID` of `106`
+4. Filter the current log to show all logs with an `Event ID` of `106`
 
 ![Filtering Event Log with Event ID 106](/images/POC_1/Mitigation/Notify_New_Tasks/POC1_Event_Viewer_Filter_By_Event_ID.png)
 
