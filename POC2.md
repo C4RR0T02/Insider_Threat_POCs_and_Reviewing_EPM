@@ -105,7 +105,7 @@ Device Screen Capture:
 
 ![Victim's Machine Screen Capture](/images/POC_2/Exploitation/POC2_Victim_Machines_Screen_Capture.png)
 
-## Possible Mitigations
+## Possible Mitigations and Recommendations
 
 1. [Disable Path Exclusions](#disable-path-exclusions)
 2. [Conduct Scheduled Scans](#conduct-scheduled-scans)

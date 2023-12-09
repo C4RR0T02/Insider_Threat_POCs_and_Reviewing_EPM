@@ -310,8 +310,7 @@ If the file cannot be deleted, Manually clear the file content and save the file
 
 ![Cleared Windows Defenders Log](/images/POC_1/Exploitation/POC1_Windows_Defender_Logs_Cleared.png)
 
-
-## Possible Mitigations
+## Possible Mitigations and Recommendations
 
 1. [Disable Path Exclusions](#disable-path-exclusions)
 2. [Notify Administrators of New Scheduled Tasks](#notify-administrators-of-new-scheduled-tasks)

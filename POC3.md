@@ -161,7 +161,7 @@ Set-CriticalProcess -Force -Verbose -ExitImmediately
 
 ![Blue Screen of Death](/images/POC_3/Exploitation/POC3_BSOD.png)
 
-## Possible Mitigations
+## Possible Mitigations and Recommendations
 
 1. [Notify Administrators of New Scheduled Tasks](#notify-administrators-of-new-scheduled-tasks)
 2. [Backup Device and Roll Back Machine](#backup-device-and-roll-back-machine)
