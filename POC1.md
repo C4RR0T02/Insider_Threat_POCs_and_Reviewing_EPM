@@ -34,11 +34,11 @@ The last phase which is the covering tracks phase will state how the attacker ca
 https://github.com/PowerShellMafia/PowerSploit/releases/tag/v3.0.0 
 ```
 
-![Download PowerSploit on GitHub](/images/POC_1/Preperation/POC1_Downloading_PowerSploit.png)
+![Download PowerSploit on GitHub](/images/POC_1/Preparation/POC1_Downloading_PowerSploit.png)
 
 2. Upload the PowerSploit folder into a thumbdrive or storage device
 
-![Files within the directory](/images/POC_1/Preperation/POC1_Folder_in_Storage_Device.png)
+![Files within the directory](/images/POC_1/Preparation/POC1_Folder_in_Storage_Device.png)
 
 ### Exploitation
 
