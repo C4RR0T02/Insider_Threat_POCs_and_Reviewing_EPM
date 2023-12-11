@@ -301,4 +301,3 @@ The backing up of device allows users to quickly rollback the system to the last
 [PowerSploit](https://github.com/PowerShellMafia/PowerSploit)  
 [Running PowerShell Script without displaying Window](https://stackoverflow.com/questions/1802127/how-to-run-a-powershell-script-without-displaying-a-window)  
 [Start your PC in safe mode in Windows](https://support.microsoft.com/en-us/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234)  
-
