@@ -15,9 +15,10 @@ This repository consists of 5 Proof of Concept attacks on the threats of malicio
 ### Machines Used
 
 |Machine Name|Machine IP|Type of Machine|Domain|
-|--|--|--|--|
+|--|:--:|:--:|:--:|
 |Windows Server 2022|192.168.8.10|Domain Controller|c4rr0ting.com|
 |Windows 10 Client|192.168.8.11|Client|c4rr0ting.com|
+|Kali Linux|192.168.8.6|Attacker|-|
 
 ### Users
 
