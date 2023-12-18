@@ -346,15 +346,15 @@ To combat threat actors from being able to evade a real time scan, the path excl
 
 ![Microsoft Defender Antivirus Configurations within Group Policy](/images/POC_1/Mitigation/Disable_Path_Exclusions/POC1_Microsoft_Defender_Configurations_Group_Policy.png)
 
-6. Within the Microsoft Defender Antivirus, Locate and `Enable` the following rule - `Control whether or not exclusions are visible to Local Admins`
+6. Within the Microsoft Defender Antivirus, Locate and `Enable` the following rule - `Control whether exclusions are visible to Local Admins`
 
-![Control whether or not exclusions are visible to Local Admins rule](/images/POC_1/Mitigation/Disable_Path_Exclusions/POC1_Control_Exclusions_Visibility.png)
+![Control whether exclusions are visible to Local Admins rule](/images/POC_1/Mitigation/Disable_Path_Exclusions/POC1_Control_Exclusions_Visibility.png)
 
 7. Within Microsoft Defender Antivirus, Locate `Exclusions`
 
 ![Microsoft Defender Antivirus Exclusions Configurations within Group Policy](/images/POC_1/Mitigation/Disable_Path_Exclusions/POC1_Microsoft_Defender_Exclusions_Configuration_Group_Policy.png)
 
-8. Configure the following policies and enfoce them
+8. Configure the following policies and enforce them
 
 ![Configured Microsoft Defender Antivirus Exclusions Configurations within Group Policy](/images/POC_1/Mitigation/Disable_Path_Exclusions/POC1_Microsoft_Defender_Exclusions_Configuration_Group_Policy_Configured.png)
 
