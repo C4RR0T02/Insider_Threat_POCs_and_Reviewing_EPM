@@ -149,7 +149,7 @@ Personal Ransomware ID: emhevrHXUgxGDsadZThnCSDPFMT2M01ULP46Wv9n4hoGwHREOJZ2Jzi8
 print("Ransomware Done Runing!!!!!!")
 ```
 
-4. Copy this file into an external storage for exploitation
+5. Copy this file into an external storage for exploitation
 
 ### Exploitation
 

