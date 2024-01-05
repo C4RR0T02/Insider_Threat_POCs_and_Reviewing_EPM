@@ -10,7 +10,7 @@ This attack aims to outline the threats posed to the organisation from a Ransomw
 
 ## Steps to Carry Out Exploitation
 
-There are a total of 2 steps to be caried out during the process of conducting a reverse shell attack.
+There are a total of 2 steps to be caried out during the process of conducting a ransomware attack.
 
 The following are the 2 steps taken during the POC.
 
